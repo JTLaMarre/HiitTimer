@@ -10,18 +10,27 @@ import RestLength from './components/restLength';
 import SetDisplay from './components/sets';
 import SecsDisplay from './components/secs';
 import MinDisplay from './components/min';
+import TimeDisplay from './components/timeDisplay';
+import StartTimer from './components/startTimer';
 import SetsContextProvider from './context/sets.js';
 import SecsContextProvider from './context/setSecs';
-import MinContextProvider from './context/min'
+import MinContextProvider from './context/min';
+import TimeContextProvider from './context/time';
 
 
 function App() {
   return (
     <div className="App">
+    <TimeContextProvider>
     <SetsContextProvider>
     <SecsContextProvider>
     <MinContextProvider>
       <Container>
+      <Row>
+        <Col>
+          <TimeDisplay/>
+        </Col>
+      </Row>
         <Row>
           <Col>
             <Sets />
@@ -29,6 +38,8 @@ function App() {
             <SetLength />
             <br/>
             <RestLength />
+            <br/>
+            <StartTimer/>
           </Col>
           <Col>
             <SetDisplay />
@@ -40,6 +51,7 @@ function App() {
     </MinContextProvider>
     </SecsContextProvider>
     </SetsContextProvider>
+    </TimeContextProvider>
     </div>
   );
 }

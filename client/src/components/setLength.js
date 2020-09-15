@@ -7,7 +7,7 @@ import {secsContext} from '../context/setSecs'
 
 const SetLength = () => {
 
-    const nums = [10,15,20,25,30,35,40,45,50,60,90,120]
+    const nums = [0,10,15,20,25,30,35,40,45,50,60,90,120]
     const {setSecs} =useContext(secsContext)
     const howLong = (num) => {
         setSecs(num)
