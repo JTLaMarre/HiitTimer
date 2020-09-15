@@ -7,14 +7,20 @@ import Col from 'react-bootstrap/Col';
 import Sets from './components/setsDrop';
 import SetLength from './components/setLength';
 import RestLength from './components/restLength';
-import SetDisplay from './components/sets'
+import SetDisplay from './components/sets';
+import SecsDisplay from './components/secs';
+import MinDisplay from './components/min';
 import SetsContextProvider from './context/sets.js';
+import SecsContextProvider from './context/setSecs';
+import MinContextProvider from './context/min'
 
 
 function App() {
   return (
     <div className="App">
     <SetsContextProvider>
+    <SecsContextProvider>
+    <MinContextProvider>
       <Container>
         <Row>
           <Col>
@@ -26,9 +32,13 @@ function App() {
           </Col>
           <Col>
             <SetDisplay />
+            <SecsDisplay/>
+            <MinDisplay/>
           </Col>
         </Row>
       </Container>
+    </MinContextProvider>
+    </SecsContextProvider>
     </SetsContextProvider>
     </div>
   );

@@ -8,7 +8,7 @@ const {sets} = useContext(setContext)
 
     return(
         <h1>
-        {sets}
+        {`${sets}Sets`}
         </h1>
     )
 }

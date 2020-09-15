@@ -8,15 +8,13 @@ import {setContext} from '../context/sets'
 const Sets = () => {
 
     const nums = [1,2,3,4,5,6,7,8,9,10]
-    const {sets , setSets} = useContext(setContext)
+    const {setSets} = useContext(setContext)
 
     const howManySets = (num) => {
         setSets(num)
-        displaySets()
+        
     }
-    const displaySets=()=>{
-        console.log(sets)
-    }
+   
     
     return (
         

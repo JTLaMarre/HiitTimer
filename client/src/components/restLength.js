@@ -1,15 +1,16 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
-import React from 'react';
+import React, {useContext} from 'react';
 import DropdownButton from 'react-bootstrap/DropdownButton';
 import Dropdown from 'react-bootstrap/Dropdown';
+import {minContext} from '../context/min'
 
 
 const RestLength = () => {
 
     const nums = [1,2,3,4,5]
-
+    const{setMin}=useContext(minContext)
     const howLong = (num) => {
-        console.log(`${num}min`)
+        setMin(num)
     }
     
     return (

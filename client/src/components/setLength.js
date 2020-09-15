@@ -1,15 +1,16 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
-import React from 'react';
+import React,{useContext} from 'react';
 import DropdownButton from 'react-bootstrap/DropdownButton';
 import Dropdown from 'react-bootstrap/Dropdown';
+import {secsContext} from '../context/setSecs'
 
 
 const SetLength = () => {
 
     const nums = [10,15,20,25,30,35,40,45,50,60,90,120]
-
+    const {setSecs} =useContext(secsContext)
     const howLong = (num) => {
-        console.log(`${num}secs`)
+        setSecs(num)
     }
     
     return (
