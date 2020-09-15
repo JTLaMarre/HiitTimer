@@ -4,23 +4,23 @@ import DropdownButton from 'react-bootstrap/DropdownButton';
 import Dropdown from 'react-bootstrap/Dropdown';
 
 
-const SetLength = () => {
+const RestLength = () => {
 
-    const nums = [10,15,20,25,30,35,40,45,50,60,90,120]
+    const nums = [1,2,3,4,5]
 
     const howLong = (num) => {
-        console.log(`${num}secs`)
+        console.log(`${num}min`)
     }
     
     return (
         
-            <DropdownButton id="dropdown-item-button" title="Set Length" >
+            <DropdownButton id="dropdown-item-button-variants-success" variant="success" title="Rest Length" >
             {nums.map((num)=>{
                 return(
-                <Dropdown.Item as="button" onClick={()=>{howLong(num)}}>{`${num}secs`}</Dropdown.Item>
+                <Dropdown.Item as="button" onClick={()=>{howLong(num)}}>{`${num}mins`}</Dropdown.Item>
                 )})}
             </DropdownButton>
         
     )
 }
-export default SetLength
+export default RestLength
