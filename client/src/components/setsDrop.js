@@ -8,14 +8,17 @@ const Sets = () => {
 
     const nums = [1,2,3,4,5,6,7,8,9,10]
 
+    const howManySets = (num) => {
+        console.log(num)
+    }
     
     return (
         
-            <DropdownButton id="dropdown-item-button" title="Sets">
+            <DropdownButton id="dropdown-item-button" title="Sets" >
 
             {nums.map((num)=>{
                 return(
-                <Dropdown.Item as="button">{num}</Dropdown.Item>
+                <Dropdown.Item as="button" onClick={()=>{howManySets(num)}}>{num}</Dropdown.Item>
                 )})}
             </DropdownButton>
         
