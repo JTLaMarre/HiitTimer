@@ -11,15 +11,18 @@ const StartTimer = ()=>{
 const{time , setTime} = useContext(TimeContext)
 const{secs } = useContext(secsContext)
 const{sets,setSets } = useContext(setContext)
-const{min } = useContext(minContext)
+const{min,setMin } = useContext(minContext)
 const [intTime, setIntTime]= useState(0)
+const[rest,setRest] = useState(false)
 
 const Start =()=>{
     if(sets>0){
+        setRest(false)
         setTime(secs)
         setIntTime(secs)
     }
     if(sets===0){
+        setRest(true)
         setTime(min*60)
         setIntTime(min*60)
     }
@@ -44,11 +47,12 @@ const handleInterval=()=>{
             seconds--;
             setTime(seconds)
             if (seconds === 0) {
-                if(sets>0){
+                if(rest===false){
                     setSets(sets-1)
                 }
-                if(sets===0 && min>0){
+                if(rest===true){
                     Start()
+                    
                 }
                 clearInterval(HiitInterval)
             }
