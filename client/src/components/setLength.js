@@ -15,7 +15,7 @@ const SetLength = () => {
     
     return (
         
-            <DropdownButton id="dropdown-item-button" title="Set Length" >
+            <DropdownButton id="dropdown-item-button" title="Set Length" className="length" >
             {nums.map((num)=>{
                 return(
                 <Dropdown.Item as="button" onClick={()=>{howLong(num)}}>{`${num}secs`}</Dropdown.Item>

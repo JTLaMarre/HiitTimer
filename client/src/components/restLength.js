@@ -2,7 +2,8 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import React, {useContext} from 'react';
 import DropdownButton from 'react-bootstrap/DropdownButton';
 import Dropdown from 'react-bootstrap/Dropdown';
-import {minContext} from '../context/min'
+import {minContext} from '../context/min';
+
 
 
 const RestLength = () => {
@@ -15,7 +16,7 @@ const RestLength = () => {
     
     return (
         
-            <DropdownButton id="dropdown-item-button-variants-success" variant="success" title="Rest Length" >
+            <DropdownButton id="dropdown-item-button-variants-success" className="length" variant="success" title="Rest Length" >
             {nums.map((num)=>{
                 return(
                 <Dropdown.Item as="button" onClick={()=>{howLong(num)}}>{`${num}mins`}</Dropdown.Item>
