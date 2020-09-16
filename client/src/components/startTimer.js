@@ -6,8 +6,11 @@ const StartTimer = ()=>{
 
 const{time , setTime} = useContext(TimeContext)
 
+const Start =()=>{
+    console.log(time)
+}
     return(
-        <Button variant="danger">Start</Button>
+        <Button variant="danger" active onClick={Start}>Start</Button>
     )
 }
 export default StartTimer
