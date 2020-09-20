@@ -1,6 +1,9 @@
 #timer{
     font-size: 150px;
     color:red;
-    text-shadow: -2px -2px 0 #000, 2px -2px 0 #000, -2px 2px 0 #000, 2px 2px 0 #000;
+    
+}
+.container{
+    background-color: gray;
 }
 

@@ -25,6 +25,8 @@ const Start =()=>{
         setRest(true)
         setTime(min*60)
         setIntTime(min*60)
+        
+
     }
     console.log(time)
 }
@@ -34,9 +36,7 @@ useEffect(()=>{
     handleInterval()
 },[intTime])
 
-useEffect(()=>{
-    Start()
-},[sets])
+
 
 const handleInterval=()=>{
     if(time>0){
@@ -49,15 +49,32 @@ const handleInterval=()=>{
             if (seconds === 0) {
                 if(rest===false){
                     setSets(sets-1)
+                    setIntTime(0)
+                    Start()
                 }
                 if(rest===true){
-                    Start()
+                    handleRestInterval()
+                    
                     
                 }
                 clearInterval(HiitInterval)
             }
         }, 1000)
     }
+}
+const handleRestInterval =()=>{
+
+    let seconds = min*60
+
+    let RestInterval = setInterval(function () {
+        seconds--;
+        setTime(seconds)
+        if (seconds === 0) {
+          
+            clearInterval(RestInterval)
+        }
+    }, 1000)
+
 }
 
 

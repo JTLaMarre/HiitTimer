@@ -1,10 +1,10 @@
-import React,{useContext} from 'react';
+import React,{useContext,useState} from 'react';
 import {setContext} from '../context/sets'
 
 
 const SetDisplay = ()=>{
 
-const {sets} = useContext(setContext)
+const {sets} = useContext(setContext);
 
     return(
         <h1>
