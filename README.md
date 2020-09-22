@@ -22,7 +22,7 @@ This project is deployed on heroku otherwise this project reqires the user to np
 this is used as a workout simple workout timer. 
 
 ## Technologies
-react, react-bootstrap, node.js,  
+react, react-bootstrap, node.js,express.js  
 
 ## License
 used the undefined license
@@ -39,7 +39,7 @@ I WANT Timer
 SO THAT time the workout sets and rest periods more easily.
 
 ## ScreenShot
-screenshot here!!!!!s
+
 ![Screenshot](./assets/Capture.PNG)
 ## Github
 profile:jacobtlamarre
