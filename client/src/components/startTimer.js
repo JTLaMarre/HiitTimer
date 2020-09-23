@@ -14,6 +14,17 @@ const{sets,setSets } = useContext(setContext)
 const{min,setMin } = useContext(minContext)
 const [intTime, setIntTime]= useState(0)
 const[rest,setRest] = useState(false)
+const[start,setStart] = useState(false)
+
+const Begin =()=>{
+    if (start===false){
+        setStart(true)
+        Start()
+    }
+    if(start===true){
+        console.log("timer started already wait for finish")
+    }
+}
 
 const Start =()=>{
     if(sets>0){
@@ -69,17 +80,19 @@ const handleRestInterval =()=>{
     let RestInterval = setInterval(function () {
         seconds--;
         setTime(seconds)
-        if (seconds === 0) {
-          
-            clearInterval(RestInterval)
-        }
+        
+        setStart(false)
+
+        setTime(0)
+        
+        clearInterval(RestInterval)
     }, 1000)
 
 }
 
 
     return(
-        <Button variant="danger" active onClick={Start}>Start</Button>
+        <Button variant="danger" active onClick={Begin}>Start</Button>
     )
 }
 export default StartTimer

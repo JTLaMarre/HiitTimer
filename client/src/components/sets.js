@@ -8,7 +8,7 @@ const {sets} = useContext(setContext);
 
     return(
         <h1>
-        {`${sets}Sets`}
+        {`${sets}Sets Remaining`}
         </h1>
     )
 }
